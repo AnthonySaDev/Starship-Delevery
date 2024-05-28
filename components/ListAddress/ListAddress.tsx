@@ -55,12 +55,12 @@ export default function ListAddress() {
         <ul className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 items-center">
           {addresses.map((address, index) => (
             <CardAddress
-              address={address.address} // Alterado para passar somente o endereço
+              address={address.address}
               name={address.name}
-              key={address.id} // Use o id como chave única
+              key={address.id}
               selected={index === selectedId}
-              onClick={() => handleSelect(address.id)} // Use o id como identificador único
-              id={address.id} // Use o id como identificador único
+              onClick={() => handleSelect(address.id)}
+              id={address.id}
             />
           ))}
         </ul>
