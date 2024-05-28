@@ -56,9 +56,9 @@ export default function CardAddress({
             className={cn(selected ? "cursor-pointer" : "cursor-not-allowed")}
             disabled={!selected}
           >
-            <Link href={`/edit/${id}`}>
+            <span>
               <AiFillEdit className="mr-2" /> Edit
-            </Link>
+            </span>
           </Button>
           <Button
             asChild
@@ -73,7 +73,7 @@ export default function CardAddress({
         </CardFooter>
       </Card>
       {selected && (
-        <div className="absolute top-2 right-2 border border-purple-500  rounded-full w-3 h-3">
+        <div className="absolute top-2 right-2 border border-purple-500 rounded-full w-3 h-3">
           <div className="bg-purple-700 w-full h-full rounded-full -p-2"></div>
         </div>
       )}

@@ -1,7 +1,9 @@
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Roboto as FontSans } from "next/font/google";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const fontSans = FontSans({
   weight: ["400", "500", "700"],
@@ -28,6 +30,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <ToastContainer />
       </body>
     </html>
   );

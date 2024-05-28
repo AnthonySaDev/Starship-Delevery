@@ -1,4 +1,4 @@
-interface CardAddressProps {
+export interface CardAddressProps {
   id?: number;
   name: string;
   address: {
