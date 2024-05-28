@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import CardAddress from "../CardAddress/CardAddress";
