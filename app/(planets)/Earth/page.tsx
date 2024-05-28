@@ -1,7 +1,6 @@
 import AddAddress from "@/components/AddAddress/AddAddress";
 import ListAddress from "@/components/ListAddress/ListAddress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Image from "next/image";
 
 export default function Earth() {
   return (
@@ -14,13 +13,6 @@ export default function Earth() {
       </h2>
 
       <div className="text-lg mb-4 bg-zinc-100 p-10 rounded">
-        <Image
-          src={"/assets/astronautForm.png"}
-          alt="astronaut"
-          width={250}
-          height={250}
-          className="absolute left-1/2 top-1/2"
-        />
         <Tabs defaultValue="list">
           <TabsList className="flex">
             <TabsTrigger value="list">List Address</TabsTrigger>
