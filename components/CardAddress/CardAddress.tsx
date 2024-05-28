@@ -19,7 +19,7 @@ export default function CardAddress({
   id,
 }: CardAddressProps) {
   return (
-    <li className="min-w-[350px] relative cursor-pointer">
+    <li className="min-w-[320px] relative cursor-pointer">
       <Card
         className={cn(selected && "border-2 border-purple-400")}
         onClick={onClick}
