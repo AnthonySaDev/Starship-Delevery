@@ -19,7 +19,7 @@ export default function CardAddress({
   id,
 }: CardAddressProps) {
   return (
-    <li className="min-w-[320px] relative cursor-pointer">
+    <li className="min-w-full sm:min-w-[120px] md:min-w-[200px] lg:w-[220px] xl:min-w-[320px] relative cursor-pointer">
       <Card
         className={cn(selected && "border-2 border-purple-400")}
         onClick={onClick}
@@ -44,8 +44,8 @@ export default function CardAddress({
           <Image
             src={"/assets/map.png"}
             alt={"map"}
-            width={120}
-            height={120}
+            width={90}
+            height={90}
             className="rounded"
           />
         </CardContent>
