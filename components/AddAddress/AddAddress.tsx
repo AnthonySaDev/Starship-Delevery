@@ -30,8 +30,8 @@ export default function AddAddress() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <div className="min-w-[320px] lg:min-w-[1000px] md:min-w-[700px] px-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 ">
         <Label>
           Name
           <Input
@@ -39,6 +39,7 @@ export default function AddAddress() {
             name="name"
             value={address.name}
             onChange={handleChange}
+            className="my-2"
           />
         </Label>
         <Label>
