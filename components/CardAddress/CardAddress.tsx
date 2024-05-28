@@ -11,6 +11,20 @@ import Link from "next/link";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { Button } from "../ui/button";
 
+export interface CardAddressProps {
+  id?: number;
+  name: string;
+  address: {
+    street: string;
+    number: string;
+    city: string;
+    postalCode: string;
+    country: string;
+  };
+  selected?: boolean;
+  onClick?: () => void;
+}
+
 export default function CardAddress({
   address,
   name,
