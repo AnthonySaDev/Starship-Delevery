@@ -8,6 +8,7 @@ export default function ListAddress() {
 
   const handleSelect = (id: number) => {
     setSelectedId(id);
+    setHasSavedAddresses(true);
   };
 
   return (
