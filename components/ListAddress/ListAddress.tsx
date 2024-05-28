@@ -1,17 +1,28 @@
-"use client";
 import { useEffect, useState } from "react";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import CardAddress from "../CardAddress/CardAddress";
 
+type Address = {
+  id: number;
+  name: string;
+  address: {
+    street: string;
+    number: string;
+    city: string;
+    postalCode: string;
+    country: string;
+  };
+};
+
 export default function ListAddress() {
-  const [addresses, setAddresses] = useState([]);
+  const [addresses, setAddresses] = useState<Address[]>([]);
   const [selectedId, setSelectedId] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
     try {
-      const savedAddresses = JSON.parse(
+      const savedAddresses: Address[] = JSON.parse(
         localStorage.getItem("addresses") || "[]",
       );
       setAddresses(savedAddresses);
@@ -44,12 +55,12 @@ export default function ListAddress() {
         <ul className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-5 items-center">
           {addresses.map((address, index) => (
             <CardAddress
-              address={address}
+              address={address.address} // Alterado para passar somente o endereço
               name={address.name}
-              key={index}
+              key={address.id} // Use o id como chave única
               selected={index === selectedId}
-              onClick={() => handleSelect(index)}
-              id={index}
+              onClick={() => handleSelect(address.id)} // Use o id como identificador único
+              id={address.id} // Use o id como identificador único
             />
           ))}
         </ul>
