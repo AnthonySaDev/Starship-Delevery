@@ -15,7 +15,7 @@ export default function ListAddress() {
     <>
       {hasSavedAddresses ? (
         <>
-          <ul className="flex flex-col lg:grid lg:grid-cols-4 gap-5 items-center">
+          <ul className="flex flex-col md:grid md:grid-cols-3 gap-5 items-center">
             {earthAddress.map((address) => (
               <CardAddress
                 address={address.address}
