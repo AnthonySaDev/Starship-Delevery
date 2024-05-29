@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { Button } from "../ui/button";
+import { CardAddressProps } from "./cardAddress";
 
 export default function CardAddress({
   address,
@@ -42,7 +43,7 @@ export default function CardAddress({
             </p>
           </section>
           <Image
-            src={"/assets/map.png"}
+            src={"/assets/earth.png"}
             alt={"map"}
             width={90}
             height={90}
@@ -56,9 +57,9 @@ export default function CardAddress({
             className={cn(selected ? "cursor-pointer" : "cursor-not-allowed")}
             disabled={!selected}
           >
-            <span>
+            <Link href={`/edit/${id}`}>
               <AiFillEdit className="mr-2" /> Edit
-            </span>
+            </Link>
           </Button>
           <Button
             asChild
@@ -73,7 +74,7 @@ export default function CardAddress({
         </CardFooter>
       </Card>
       {selected && (
-        <div className="absolute top-2 right-2 border border-purple-500 rounded-full w-3 h-3">
+        <div className="absolute top-2 right-2 border border-purple-500  rounded-full w-3 h-3">
           <div className="bg-purple-700 w-full h-full rounded-full -p-2"></div>
         </div>
       )}
