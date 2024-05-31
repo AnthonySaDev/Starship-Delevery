@@ -4,7 +4,7 @@ import { FaRocket } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col py-16 px-10 lg:px-24 bg-gradient-to-r from-blue-800 to-purple-700 text-white relative overflow-hidden">
+    <main className="flex min-h-screen flex-col py-16 px-10 lg:px-24 bg-gradient-to-r from-zinc-700 to-slate-800 text-white relative overflow-hidden">
       <div className="relative z-10 my-5">
         <h1 className="text-5xl font-extrabold mb-8 flex items-center">
           Hello, Explorer! <FaRocket className="ml-2" />

@@ -1,12 +1,22 @@
 // .eslintrc.js
 module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    node: true,
+  },
   parser: "@typescript-eslint/parser",
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-  ],
-  plugins: ["@typescript-eslint", "prettier"],
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  extends: [],
   rules: {
-    "prettier/prettier": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
   },
 };

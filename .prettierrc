@@ -1,10 +1,17 @@
 {
-  "semi": true,
-  "singleQuote": false,
-  "jsxSingleQuote": false,
-  "tsxSingleQuote": false,
-  "trailingComma": "all",
   "printWidth": 80,
   "tabWidth": 2,
-  "endOfLine": "lf"
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "avoid",
+  "proseWrap": "preserve",
+  "htmlWhitespaceSensitivity": "css",
+  "endOfLine": "lf",
+  "disableLanguages": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
 }

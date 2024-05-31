@@ -1,6 +1,11 @@
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+type PlanetComponentProps = {
+  planetName: string;
+  image: string;
+  disabled?: boolean;
+};
 
 export default function PlanetComponent({
   planetName,
@@ -8,7 +13,7 @@ export default function PlanetComponent({
   disabled,
 }: PlanetComponentProps) {
   return (
-    <Link href={disabled ? "#" : `/${planetName}`}>
+    <Link href={disabled ? "#" : `/${planetName.toLowerCase()}`}>
       <h1 className="font-bold text-2xl">{planetName}</h1>
       <Image
         src={image}
