@@ -23,7 +23,7 @@ export default function Earth() {
         Now you can edit and add Address to your profile
       </h2>
 
-      <div className="bg-white rounded-lg shadow-lg p-10 mx-auto w-full lg:w-3/4 max-w-4xl">
+      <div className="bg-white rounded-lg shadow-lg p-8">
         <Tabs defaultValue="list">
           <TabsList className="flex justify-center mb-6">
             <TabsTrigger

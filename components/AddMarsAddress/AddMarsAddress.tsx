@@ -93,7 +93,7 @@ export default function AddMarsAddress() {
   return (
     <div className="min-w-[320px] lg:min-w-[800px] md:min-w-[500px] px-4 py-8 bg-white shadow-lg rounded-lg">
       <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-        <Label className="flex items-center gap-2">
+        <Label>
           <FaUser className="inline mr-2 text-red-500" />
           Name
           <Input
