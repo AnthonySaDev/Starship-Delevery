@@ -13,7 +13,7 @@ export default function PlanetComponent({
   disabled,
 }: PlanetComponentProps) {
   return (
-    <Link href={disabled ? "#" : `/${planetName.toLowerCase()}`}>
+    <Link href={disabled ? "#" : `/${planetName}`}>
       <h1 className="font-bold text-2xl">{planetName}</h1>
       <Image
         src={image}
